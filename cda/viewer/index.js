@@ -1,4 +1,4 @@
-const XSL_PATH = 'http://127.0.0.1:5501/cda/stylesheets/';//'https://ripplcare.github.io/hosted/cda/stylesheets/';
+const XSL_PATH = 'https://ripplcare.github.io/hosted/cda/stylesheets/';
 let XSLDoc = ''
 let xmlStr = ''
 
