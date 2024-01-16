@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<?xml-stylesheet type="text/xsl" href="../stylesheets/style-1.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://ripplcare.github.io/hosted/cda/stylesheets/style-1.xsl"?>
 <!-- Document ID: 66841881 - DAT: 55464.99-->
 
 <ClinicalDocument xmlns="urn:hl7-org:v3"

@@ -4,10 +4,7 @@ let xmlStr = ''
 
 const docContainer = document.getElementById('doc-container')
 
-/* const styleSelect = document.getElementById('style-select');
-let selectedStyleSheet = styleSelect.value;
-styleSelect.addEventListener('change', handleStyleSelectChange) */
-let selectedStyleSheet = 'style-1.xsl';
+const XSLUrl = 'https://ripplcare.github.io/hosted/cda/stylesheets/style-1.xsl';
 loadXSL();
 
 const fileInput = document.getElementById('file-input');
@@ -23,10 +20,8 @@ fileInput.addEventListener('change', function (e) {
   freader.readAsText(selectedFile);
 })
 
-
-
 function loadXSL(cb) {
-  const filename = `${XSL_PATH}${selectedStyleSheet}`
+  console.log('loading xsl')
   const req = new XMLHttpRequest();
   req.addEventListener("load", () => {
     XSLDoc = req.responseXML;
@@ -34,10 +29,9 @@ function loadXSL(cb) {
       cb();
     }
   });
-  req.open("GET", filename, false);
+  req.open("GET", XSLUrl, false);
   req.send('');
 }
-
 
 function processDoc() {
 
@@ -45,7 +39,6 @@ function processDoc() {
     return;
   }
 
-  console.log('processing', selectedStyleSheet)
 
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(xmlStr, 'application/xml');
@@ -54,13 +47,10 @@ function processDoc() {
 
   //create a new doc with only the root
   const serializer = new XMLSerializer();
-  const rootStr = serializer.serializeToString(root);
-  const newDoc = new DOMParser().parseFromString(rootStr, 'application/xml');
-  const pi = newDoc.createProcessingInstruction("xml-stylesheet", `href="${XSL_PATH + selectedStyleSheet}"`)
-  newDoc.insertBefore(pi, newDoc.firstChild);
+  let rootStr = serializer.serializeToString(root);
+  rootStr = `<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="${XSLUrl}" ?>${rootStr}`;
 
-  const newDocOpening = newDoc.createProcessingInstruction('xml', 'version="1.0"');
-  newDoc.insertBefore(newDocOpening, newDoc.firstChild);
+  const newDoc = new DOMParser().parseFromString(rootStr, 'application/xml');
 
   // apply XSL transformation to the new doc
   const xsltProcessor = new XSLTProcessor();
@@ -78,7 +68,3 @@ function processDoc() {
 
 }
 
-function handleStyleSelectChange(e) {
-  selectedStyleSheet = e.target.value;
-  loadXSL(processDoc);
-}
