@@ -323,13 +323,6 @@ flowruntime-progress-indicator {
   display: none;
 }
 
-p strong {
-  color: var(--heading__color, inherit);
-  font-family: var(--heading__font-family, inherit);
-  font-weight: var(--heading__font-weight, normal);
-  font-size: max(var(--h2__font-size), var(--label__font-size) + 2px) !important;
-}
-
 label {
   cursor: default;
   display: block;
