@@ -1,5 +1,7 @@
 /**
-Stylesheet for Screen Flow forms on the Portal site ( partner, unum )
+Stylesheet for Screen Flow forms on the Portal site ( partner, unum, get care )
+except the new get care form (v2).
+
 Fonts are loaded by rippl-defaults.css in github page. No need to load them again here.
 **/
 
@@ -7,7 +9,9 @@ Fonts are loaded by rippl-defaults.css in github page. No need to load them agai
   color: #f73c36 !important;
   font-size: 22px !important;
   font-family: "Lora" !important;
+  font-weight: 600 !important;
 }
+
 /* .rightSection .PortalFormFlowDiv .flowruntimeBody .field-element  .slds-text-color_error span p span {
 color:#f73c36 !important;
 font-family: "Montserrat"-Medium !important;
@@ -24,7 +28,6 @@ font-family: "Montserrat"-Medium !important;
 .rightSection .PortalFormFlowDiv .flowruntimeBody .field-element {
   color: #333333;
   font-family: "Montserrat";
-  font-weight: 600;
 }
 
 .rightSection .PortalFormFlowDiv .flowruntimeBody .field-element .flowruntime-inline-container .flowruntime-inline span {
@@ -38,14 +41,13 @@ font-family: "Montserrat"-Medium !important;
   font-size: 14px !important;
 }
 .rightSection .PortalFormFlowDiv .flowruntimeBody .field-element .container .slds-rich-text-editor__output span p {
-  font-size: 14px !important;
+  font-size: 14px;
   font-family: "Lora", sans-serif;
-  font-style: italic;
 }
 .rightSection .PortalFormFlowDiv .flowruntimeBody .field-element .slds-form-element__control .slds-radio .slds-radio__label .slds-form-element__label {
   font-family: "Montserrat" !important;
   color: #333;
-  font-size: 13px !important;
+  font-size: 13px;
 }
 
 .rightSection .PortalFormFlowDiv .slds-card__footer .footerContainer .slds-button {
