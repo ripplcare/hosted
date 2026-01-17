@@ -474,13 +474,6 @@ button:not([disabled]) {
   position: relative;
 }
 
-.footer-text {
-  padding-top: 30px;
-  padding-bottom: 40px;
-  position: relative;
-  color: #fff;
-}
-
 /* ---------------- SLDS OVERRIDES ---------------------- */
 
 /* get rid of 10px padding on mobile screens */
