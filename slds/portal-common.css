@@ -59,6 +59,28 @@ section h3 {
   margin: 1em 0;
 }
 
+/*
+Asterisk for labels decoupled from inputs to accommodate additional content between the label and the input.
+Ex.
+<label class="required">ABC</label>
+<!-- additional text -->
+<p>Some text</p>
+<!-- actual label, without 'required'. You must do manual validation. -->
+<lightning-radio-group
+    name="myradio"
+    options={yesNoOptions}
+    value={myradio}
+    onchange={handleInputChange}
+    type="radio">
+    </lightning-radio-group>
+*/
+label.required::before {
+  content: "*";
+  color: var(--slds-g-color-error-1);
+  display: inline-block;
+  margin-right: 0.2px;
+}
+
 /*  RESPONSIVE STYLES */
 @media (max-width: 1024px) {
   .main-content {
@@ -90,7 +112,7 @@ section h3 {
 
 @media (max-width: 640px) {
   .selected-files {
-    /* to keep the correct paddings on small screens 
+    /* to keep the correct paddings on small screens
         when a file name is too long & without whitespaces */
     max-width: calc(100% - 10px);
   }
