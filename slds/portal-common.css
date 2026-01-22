@@ -81,6 +81,14 @@ label.required::before {
   margin-right: 0.2px;
 }
 
+/* Shown when a form is being submitted */
+.spinner-container {
+  position: relative;
+  margin-left: 1em;
+  width: 48px;
+  height: 48px;
+}
+
 /*  RESPONSIVE STYLES */
 @media (max-width: 1024px) {
   .main-content {
