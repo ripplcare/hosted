@@ -2,7 +2,7 @@
 Common styles for portal form pages.
 **/
 .bg-layer {
-  background-color: #202140;
+  background-color: var(--theme-blue-dark);
   background-image: url("./img/portal-page-footer-bg.png");
   background-position: bottom;
   background-repeat: no-repeat;
