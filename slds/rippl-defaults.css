@@ -197,6 +197,7 @@ li p {
   --label__font-family: "Montserrat", sans-serif --label__font-weight: 600 --font-family-montserrat: "Montserrat", Helvetica, sans-serif;
   --font-family-lora: "Lora", serif;
   --font-family-open-sans-condensed: "Open Sans Condensed", Helvetica, sans-serif;
+  --theme-orange: #f73c36;
 }
 
 html {

@@ -29,6 +29,11 @@ Common styles for portal form pages.
   border-bottom: 2px solid #f73c36;
 }
 
+.left-section a:focus,
+.left-section a:hover {
+  color: var(--theme-orange);
+}
+
 /* RIGHT SECTION */
 .right-section {
   border-radius: 8px;
