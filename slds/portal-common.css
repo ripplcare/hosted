@@ -94,6 +94,28 @@ label.required::before {
   height: 48px;
 }
 
+.button-pill {
+  padding: 6px 24px;
+  cursor: pointer;
+  border-radius: 999px;
+  color: #fff;
+  border: none;
+  display: inline-block;
+}
+
+.button-orange {
+  background-color: var(--theme-orange);
+}
+
+.button-orange:hover {
+  background-color: var(--theme-orange-light);
+}
+
+.button-orange:disabled {
+  background-color: lightgrey;
+  border: none;
+}
+
 /*  RESPONSIVE STYLES */
 @media (max-width: 1024px) {
   .main-content {
