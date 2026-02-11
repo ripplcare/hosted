@@ -1,6 +1,10 @@
 /**
 Common styles for portal form pages.
 **/
+body {
+  background-color: var(--theme-blue-dark);
+}
+
 .bg-layer {
   background-color: var(--theme-blue-dark);
   background-image: url("./img/portal-page-footer-bg.png");
