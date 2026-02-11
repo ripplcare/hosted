@@ -389,6 +389,12 @@ input[type="text"],
   line-height: var(--input__line-height);
 }
 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  color: grey;
+}
+
 a {
   color: var(--a__color, var(--primary));
   font-weight: var(--a__font-weight, normal);
